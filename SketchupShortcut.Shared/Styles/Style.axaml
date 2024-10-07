@@ -1,0 +1,115 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <StackPanel Margin="20" Width="200" Height="200">
+            <Button Classes="Tab">Hello</Button>
+        </StackPanel>
+    </Design.PreviewWith>
+
+    <Style Selector="TextBlock.Title">
+        <Setter Property="FontFamily" Value="Fonts.Default" />
+        <Setter Property="Foreground" Value="Black" />
+    </Style>
+
+    <Style Selector="Button.Tab">
+        <Setter Property="FontFamily" Value="Fonts.Default" />
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="BorderThickness" Value="1 1 1 0" />
+        <Setter Property="CornerRadius" Value="4 4 0 0" />
+        <Setter Property="Padding" Value=" 26 6 " />
+
+        <Style Selector="^:pointerover  /template/ ContentPresenter">
+            <Setter Property="BorderBrush" Value="LightGray" />
+            <Setter Property="Background" Value="#e4e4e7" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ ContentPresenter">
+            <Setter Property="BorderBrush" Value="#a1a1aa" />
+            <Setter Property="Background" Value="#a1a1aa" />
+        </Style>
+    </Style>
+
+    <Style Selector="Button.BtnIcon">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="FontFamily" Value="Fonts.Default" />
+        <Setter Property="Padding" Value="10 0" />
+
+        <Style Selector="^:pointerover  /template/ ContentPresenter">
+            <Setter Property="Background" Value="LightGray" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="Gray" />
+        </Style>
+    </Style>
+
+    <Style Selector="Button.SketchupVersion">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="FontFamily" Value="Fonts.Default" />
+
+        <Style Selector="^:pointerover  /template/ ContentPresenter">
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#1d4ed8" />
+            <Setter Property="BorderBrush" Value="#1d4ed8" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Style>
+
+    <Style Selector="Button.UnInstall">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BorderBrush" Value="Red" />
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="Background" Value="Transparent" />
+
+        <Style Selector="^:pointerover  /template/ ContentPresenter">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="BorderBrush" Value="Red" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="DarkRed" />
+            <Setter Property="BorderBrush" Value="DarkRed" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Style>
+
+    <Style Selector="Button.Install">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="{DynamicResource  Color.Success}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource  Color.Success}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="FontFamily" Value="Fonts.Default" />
+
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="{DynamicResource  Color.Success}" BlurRadius="2" OffsetX="0" OffsetY="0" />
+            </Setter.Value>
+        </Setter>
+
+        <Style Selector="^:pointerover  /template/ ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Color.SuccessHover}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Color.SuccessHover}" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Color.SuccessPress}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Color.SuccessPress}" />
+            <Setter Property="Foreground" Value="LightGray" />
+        </Style>
+    </Style>
+
+</Styles>

@@ -1,0 +1,73 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SketchupShortcut.Extension.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="300"
+        x:Class="SketchupShortcut.Extension.Views.MainWindow"
+        Width="600" Height="300" CanResize="False"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/app.ico"
+        WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True"
+        Title="SketchupShortcut Install Extension">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="white"
+                    TintOpacity="1"
+                    MaterialOpacity="0.40" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+        <DockPanel LastChildFill="True" Margin="10">
+            <StackPanel HorizontalAlignment="Center" Margin="0 40 0 0 " VerticalAlignment="Center" DockPanel.Dock="Top">
+                <TextBlock Classes="Title" FontSize="28">Select Your Version for Installation</TextBlock>
+            </StackPanel>
+            <Grid DockPanel.Dock="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" HorizontalAlignment="Left" Classes="UnInstall" Click="ClickUnInstall"
+                        Width="120" Height="34"
+                        FontSize="16" Content="Remove" />
+                <Button Grid.Column="1" Name="Install" Classes="Install" IsEnabled="False" HorizontalAlignment="Right"
+                        Click="ClickInstall" Width="120" Height="34"
+                        FontSize="16" Content="Install" />
+            </Grid>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ItemsControl ItemsSource="{Binding sketchups}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Classes="SketchupVersion" Click="AddSketchup" Margin="5" Width="80" Height="80"
+                                    CommandParameter="{Binding}">
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="0">
+                                    <TextBlock FontSize="12" HorizontalAlignment="Center" Text="SKETCHUP" />
+                                    <TextBlock FontSize="18" HorizontalAlignment="Center" Text="{Binding NameVersion}" />
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </DockPanel>
+    </Panel>
+
+</Window>

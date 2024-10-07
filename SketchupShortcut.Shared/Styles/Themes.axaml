@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="Color.Default">#4b5563</Color>
+    <Color x:Key="Color.DefaultHover">#6b7280</Color>
+    <Color x:Key="Color.DefaultPress">#1f2937</Color>
+
+    <Color x:Key="Color.Success">#16a34a</Color>
+    <Color x:Key="Color.SuccessHover">#22c55e</Color>
+    <Color x:Key="Color.SuccessPress">#15803d</Color>
+
+
+    <FontFamily x:Key="Fonts.Default">avares://SketchupShortcut.Shared/Fonts/Fonts#JetBrainsMono</FontFamily>
+
+</ResourceDictionary>

@@ -1,0 +1,80 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SketchupShortcut.Core.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="700"
+        MaxWidth="600" MinWidth="400" MinHeight="300" CanResize="True"
+        x:Class="SketchupShortcut.Core.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/app.ico"
+        WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True"
+        Title="SketchupShortcut">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="White"
+                    TintOpacity="1"
+                    MaterialOpacity="0.10" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+        <DockPanel LastChildFill="True">
+            <ItemsControl Margin="10 32 10 0" DockPanel.Dock="Top" ItemsSource="{Binding sketchups}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Classes="Tab" Content="{Binding Name}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <Panel Background="#2563eb" Height="24" DockPanel.Dock="Bottom">
+                <Grid Height="24" Margin="14 18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Foreground="White">Selected 20</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Foreground="White">Total 30</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Panel>
+            <StackPanel Background="White">
+                <Border Height="34" BorderBrush="LightGray" BorderThickness="0 1">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Height="28" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="0">
+                            <Button Height="28" Classes="BtnIcon">A</Button>
+                        </StackPanel>
+                        <StackPanel Height="28" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
+                            <Button Height="28" Classes="BtnIcon">I</Button>
+                            <Button Height="28" Classes="BtnIcon">O</Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <TextBlock>Hello</TextBlock>
+            </StackPanel>
+        </DockPanel>
+    </Panel>
+
+</Window>

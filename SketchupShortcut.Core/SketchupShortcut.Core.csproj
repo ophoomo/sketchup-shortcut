@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+
+        <Product>SketchupShortcut</Product>
+        <Description>SketchUp Shortcut is a tool that helps with launching SketchUp and managing extensions on your computer.</Description>
+        <Copyright>Copyright © 2024 Thanaphoom.</Copyright>
+        <AssemblyName>SketchupShortcut</AssemblyName>
+        <Company>Thanaphoom</Company>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <PublishAot>true</PublishAot>
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimMode>link</TrimMode>
+        <OptimizationPreference>Speed</OptimizationPreference>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AvaloniaResource Include="Assets\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.13"/>
+        <PackageReference Include="Avalonia.Controls.TreeDataGrid" Version="11.0.10"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.13"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.13"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.13"/>
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.13"/>
+        <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.13"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SketchupShortcut.Shared\SketchupShortcut.Shared.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <UpToDateCheckInput Remove="Style\Default.axaml"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="app.ico"/>
+    </ItemGroup>
+</Project>

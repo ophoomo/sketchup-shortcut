@@ -1,0 +1,26 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SketchupShortcut.Extension.App"
+             xmlns:local="using:SketchupShortcut.Extension"
+             RequestedThemeVariant="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="avares://SketchupShortcut.Shared/Styles/Themes.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <ResourceInclude x:Key="en_US" Source="avares://SketchupShortcut.Shared/Locales/en_US.axaml" />
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <SimpleTheme />
+        <StyleInclude Source="avares://SketchupShortcut.Shared/Styles/Style.axaml" />
+    </Application.Styles>
+
+</Application>

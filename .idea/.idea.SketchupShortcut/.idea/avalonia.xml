@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="SketchupShortcut.Core/App.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Core/Style.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Core/Style/Default.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Core/Views/MainWindow.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Extension/App.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Extension/Components/Button.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Extension/Components/SketchupComponent.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Extension/Style/Color.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Extension/Style/Default.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Extension/Views/ChromelessWindow.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Extension/Views/MainWindow.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Shared/Locales/en_US.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Shared/Style/Button.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Shared/Style/Default.axaml" value="SketchupShortcut.Extension/SketchupShortcut.Extension.csproj" />
+        <entry key="SketchupShortcut.Shared/Style/Themes.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Shared/Styles/Icon.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Shared/Styles/Icons.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Shared/Styles/Style.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.Shared/Styles/Themes.axaml" value="SketchupShortcut.Core/SketchupShortcut.Core.csproj" />
+        <entry key="SketchupShortcut.install/App.axaml" value="SketchupShortcut.install/SketchupShortcut.install.csproj" />
+        <entry key="SketchupShortcut.install/Components/SketchupComponent.axaml" value="SketchupShortcut.install/SketchupShortcut.install.csproj" />
+        <entry key="SketchupShortcut.install/Views/Components/SketchupComponent.axaml" value="SketchupShortcut.install/SketchupShortcut.install.csproj" />
+        <entry key="SketchupShortcut.install/Views/MainWindow.axaml" value="SketchupShortcut.install/SketchupShortcut.install.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
